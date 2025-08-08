@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I WAS BORN TO LOVE YOU</title>
+    <style>
+            #musicBtn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        #musicBtn:hover {
+            transform: scale(1.05);
+        }
+        #musicBtn.playing {
+            background: #d83f87;
+        }
+        body {
+            background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Розово-персиковый градиент */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+         h1 {
+            color: #d83f87; /* Темно-розовый */
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .photo {
+  max-width: 80%; /* Занимает максимум 80% ширины экрана */
+  width: 300px; /* Но не больше 300px */
+  height: auto; /* Сохраняет пропорции */
+  /* остальное без изменений */
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+        
+        .message {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 30px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .heart {
+            color: #ff6b6b; 
+            font-size: 2em;
+            animation: pulse 1s infinite; /* Пульсация сердца */
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <link rel="shortcut icon" href="photo_2025-08-08_13-05-08.jpg" type="image/x-icon">
+</head>
+<body>
+    <header> <button id="musicBtn">♪ Включить музыку</button>
+    
+    <!-- Скрытый аудиоплеер -->
+    <audio id="backgroundMusic" loop>
+        <source src="Queen_-_I_Was_Born_To_Love_You_47961825.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        // Получаем элементы
+        const musicBtn = document.getElementById('musicBtn');
+        const audio = document.getElementById('backgroundMusic');
+        
+        // Обработчик клика
+        musicBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                musicBtn.textContent = '♪ Музыка играет';
+                musicBtn.classList.add('playing');
+            } else {
+                audio.pause();
+                musicBtn.textContent = '♪ Включить музыку';
+                musicBtn.classList.remove('playing');
+            }
+        });
+    </script></header>
+
+    <main>
+    <h1>ЛУЧШЕЙ ДЕВУШКЕ НА СВЕТЕ!</h1>
+    <picture> <source media="max-width:500px">
+        <img src="photo_2025-08-08_13-05-08.jpg" alt="Это Ульяна">
+        <figure>
+            <figcaption> Одна из лучших фотографий Ульяны</figcaption>
+        </figure>
+    </picture>
+    <h2> Стих для тебя!</h2>
+    <p>Твой взгляд - не грязный переулок, </p>
+    <p>Не взгляд бродяги с мостовой. </p>
+    <p>Ты - свет, как утро в зыбком луче,</p>
+    <p>Не смей сравнивать с толпой!</p>
+    <p>Ты - блонд, не выцветший от пыли,</p>
+    <p>Не рвань, не хриплый крик в ночи. </p>
+    <p>Твой смех - как звон хрустальной лиры,</p>
+    <p>А не как стон в чужой ключи.</p>
+    <p>Пусть кто-то там, в углах подземок, </p>
+    <p>Бредёт, судьбу кляня впустую. </p>
+    <p>Ты - небо, солнце, белый ветер,</p>
+    <p>И я люблю тебя, родную.</p>
+    <adress>Cама знаешь кто написал!</adress>
+    <div class="heart">♥</div>
+    </main>
+    <footer>
+        <button onmouseover="this.innerHTML='С тебя 1р, мне на карту!'">Наведись, быстро!</button>
+    </footer>
+
+    
+</body>
+</html>
