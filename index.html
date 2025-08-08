@@ -6,83 +6,141 @@
     <title>I WAS BORN TO LOVE YOU</title>
 
     <style>
-            #musicBtn {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-size: 18px;
-            cursor: pointer;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-        #musicBtn:hover {
-            transform: scale(1.05);
-        }
-        #musicBtn.playing {
-            background: #d83f87;
-        }
+    body {
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h1 {
+        color: #d83f87;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+    }
+    
+    .photo {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin: 20px auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    
+    .message {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: 30px auto;
+        font-size: 1.2em;
+        line-height: 1.6;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .heart {
+        color: #ff6b6b;
+        font-size: 2em;
+        animation: pulse 1s infinite;
+        cursor: pointer;
+        margin-top: 15px;
+        display: inline-block;
+    }
+    
+    #musicBtn {
+        background: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+    
+    #musicBtn:hover {
+        transform: scale(1.05);
+    }
+    
+    #musicBtn.playing {
+        background: #d83f87;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    
+    /* ========= АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ========= */
+    @media (max-width: 768px) {
         body {
-            background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Розово-персиковый градиент */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            padding: 30px 15px;
         }
-         h1 {
-            color: #d83f87; /* Темно-розовый */
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        
+        h1 {
+            font-size: 2.2em !important;
+            margin-top: 10px;
         }
+        
         .photo {
-            /* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
-/* Исправление для текста */
-.message {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-  max-width: 80%; /* Занимает максимум 80% ширины экрана */
-  width: 300px; /* Но не больше 300px */
-  height: auto; /* Сохраняет пропорции */
-  /* остальное без изменений */
-  border-radius: 50%;
-  border: 5px solid white;
-  margin: 20px auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
+            width: 65vw;
+            height: 65vw;
+            max-width: 250px;
+            max-height: 250px;
+        }
         
         .message {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 600px;
-            margin: 30px auto;
-            font-size: 1.2em;
-            line-height: 1.6;
+            padding: 15px;
+            font-size: 1em;
+            margin: 20px auto;
+            max-width: 90%;
         }
+        
+        #musicBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.8em !important;
+        }
+        
+        .photo {
+            width: 75vw;
+            height: 75vw;
+            border-width: 4px;
+        }
+        
+        .message {
+            padding: 12px;
+            font-size: 0.9em;
+        }
+        
         .heart {
-            color: #ff6b6b; 
-            font-size: 2em;
-            animation: pulse 1s infinite; /* Пульсация сердца */
+            font-size: 1.5em;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        /* АДАПТИВНОСТЬ */
-.message {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-@media (max-width: 600px) {
-  body { padding: 20px; }
-  h1 { font-size: 2em !important; }
-  .photo { width: 60vw; max-width: 250px; }
-  .message { padding: 15px; font-size: 1em; }
-}
-    </style>
+    }
+    
+    /* Исправление для текста */
+    .message {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+</style>
     <link rel="shortcut icon" href="photo_2025-08-08_13-05-08.jpg" type="image/x-icon">
 </head>
 <body>
@@ -145,6 +203,7 @@
 </body>
 
 </html>
+
 
 
 
