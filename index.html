@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I WAS BORN TO LOVE YOU</title>
 
-    <style>
+  <style>
     body {
         background: linear-gradient(to right, #ffafbd, #ffc3a0);
         font-family: Arial, sans-serif;
@@ -17,6 +17,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
     }
     
     h1 {
@@ -24,6 +25,11 @@
         font-size: 3em;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         margin-bottom: 20px;
+        padding: 0 15px;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
     }
     
     .photo {
@@ -45,6 +51,8 @@
         font-size: 1.2em;
         line-height: 1.6;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     
     .heart {
@@ -90,8 +98,9 @@
         }
         
         h1 {
-            font-size: 2.2em !important;
+            font-size: 2.4em !important;
             margin-top: 10px;
+            line-height: 1.2;
         }
         
         .photo {
@@ -116,7 +125,8 @@
     
     @media (max-width: 480px) {
         h1 {
-            font-size: 1.8em !important;
+            font-size: 2.0em !important;
+            padding: 0 10px;
         }
         
         .photo {
@@ -127,7 +137,7 @@
         
         .message {
             padding: 12px;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
         
         .heart {
@@ -135,10 +145,11 @@
         }
     }
     
-    /* Исправление для текста */
-    .message {
-        overflow-wrap: break-word;
-        word-break: break-word;
+    @media (max-width: 360px) {
+        h1 {
+            font-size: 1.7em !important;
+            line-height: 1.15;
+        }
     }
 </style>
     <link rel="shortcut icon" href="photo_2025-08-08_13-05-08.jpg" type="image/x-icon">
@@ -203,6 +214,7 @@
 </body>
 
 </html>
+
 
 
 
