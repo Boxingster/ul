@@ -6,15 +6,6 @@
     <title>I WAS BORN TO LOVE YOU</title>
 
     <style>
-            .message {
-  overflow-wrap: break-word; /* Перенос длинных слов */
-  padding: 15px; /* Уменьши отступы */
-}
-    @media (max-width: 600px) {
-  .photo {
-    width: 60vw; /* Было 70vw */
-  }
-    }
             #musicBtn {
             background: #ff6b6b;
             color: white;
@@ -45,6 +36,38 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         .photo {
+            /* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+/* Исправление для текста */
+.message {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Уменьшаем отступы на мобильных */
+@media (max-width: 600px) {
+  body {
+    padding: 20px; /* Было 50px */
+  }
+  
+  h1 {
+    font-size: 2em !important; /* Было 3em */
+  }
+  
+  .photo {
+    width: 60vw; /* Было 70vw */
+    max-width: 250px;
+  }
+  
+  .message {
+    padding: 15px; /* Было 20px */
+    font-size: 1em; /* Было 1.2em */
+  }
+  
+  #musicBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
   max-width: 80%; /* Занимает максимум 80% ширины экрана */
   width: 300px; /* Но не больше 300px */
   height: auto; /* Сохраняет пропорции */
@@ -137,6 +160,7 @@
 </body>
 
 </html>
+
 
 
 
