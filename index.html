@@ -42,32 +42,6 @@
   overflow-wrap: break-word;
   word-break: break-word;
 }
-
-/* Уменьшаем отступы на мобильных */
-@media (max-width: 600px) {
-  body {
-    padding: 20px; /* Было 50px */
-  }
-  
-  h1 {
-    font-size: 2em !important; /* Было 3em */
-  }
-  
-  .photo {
-    width: 60vw; /* Было 70vw */
-    max-width: 250px;
-  }
-  
-  .message {
-    padding: 15px; /* Было 20px */
-    font-size: 1em; /* Было 1.2em */
-  }
-  
-  #musicBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-}
   max-width: 80%; /* Занимает максимум 80% ширины экрана */
   width: 300px; /* Но не больше 300px */
   height: auto; /* Сохраняет пропорции */
@@ -97,6 +71,17 @@
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
+        /* АДАПТИВНОСТЬ */
+.message {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+@media (max-width: 600px) {
+  body { padding: 20px; }
+  h1 { font-size: 2em !important; }
+  .photo { width: 60vw; max-width: 250px; }
+  .message { padding: 15px; font-size: 1em; }
+}
     </style>
     <link rel="shortcut icon" href="photo_2025-08-08_13-05-08.jpg" type="image/x-icon">
 </head>
@@ -160,6 +145,7 @@
 </body>
 
 </html>
+
 
 
 
